@@ -1,15 +1,16 @@
-import './App.css'
-import Navabar from './Component/Navabar'
-import TextArea from './Component/TextArea'
+// import './App.css'
+import Footer from "./Component/Footer";
+import Navabar from "./Component/Navabar";
+import TextArea from "./Component/TextArea";
 
 function App() {
-
   return (
     <>
-  <Navabar/>
-  <TextArea/>
+      <Navabar />
+      <TextArea />
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
