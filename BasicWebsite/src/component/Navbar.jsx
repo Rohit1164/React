@@ -48,9 +48,7 @@ function Navbar() {
                 </NavLink>
               </li>
             </ul>
-            <div>
-              <ThemeBtn />
-            </div>
+            <div>{/* <ThemeBtn /> */}</div>
             <form className="d-flex" role="search">
               <Link to={"signin"}>
                 <button className="btn btn-primary" type="submit">

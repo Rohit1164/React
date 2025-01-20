@@ -1,14 +1,11 @@
-import React, { useState } from "react";
-import ThemeContext from "./ThemeContext";
-import ChildComponent from "./ChildComponent";
+import React from "react";
+import { ThemeProvider, ThemeSwitcher } from "./ThemeSwitcher";
 
 function App() {
-  const [theme, setTheme] = useState("light");
-
   return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
-      <ChildComponent />
-    </ThemeContext.Provider>
+    <ThemeProvider>
+      <ThemeSwitcher />
+    </ThemeProvider>
   );
 }
 
