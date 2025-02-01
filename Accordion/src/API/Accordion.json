@@ -1,0 +1,23 @@
+[ 
+  {
+    "id":"1",
+    "Quation":"What is your Name ?",
+    "Preshn":"What is your Name ?",
+    "Answer":"Rohit"
+  },
+  {
+    "id":"2",
+    "Quation":"What is your Age ?",
+    "Answer":"20 Years Old"
+  },
+  {
+    "id":"3",
+    "Quation":"What is your Hobbies ?",
+    "Answer":"Play criket traveling music"
+  },
+  {
+    "id":"4",
+    "Quation":"What is your Role?",
+    "Answer":"Web Developer"
+  }
+]
