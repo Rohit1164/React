@@ -1,10 +1,8 @@
-const getMoviesData = async ({ params }) => {
-  const movieID = params.id;
-  console.log(movieID);
+const getMoviesData = async (movieID) => {
   try {
     const url = `https://www.omdbapi.com/?apikey=${
       import.meta.env.VITE_API_KEY
-    }&s=titanic`;
+    }&i=${movieID}`;
     const responce = await fetch(url);
     const data = responce.json();
     return data;

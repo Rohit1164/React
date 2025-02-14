@@ -11,7 +11,6 @@ import ErrorPage from "./Component/Page/ErrorPage.jsx";
 import { getMovieData } from "./Component/FetchData/GetApiData.jsx";
 import ContactForm from "./Component/Page/Contect.jsx";
 import GetMovieCard from "./Component/Page/GetMovieCard.jsx";
-// import getMoviesData from "./Component/FetchData/GetMoviesData.jsx";
 
 const router = createBrowserRouter([
   {
@@ -43,7 +42,6 @@ const router = createBrowserRouter([
       {
         path: "/movie/:id",
         element: <GetMovieCard />,
-        // loader: getMoviesData,
       },
     ],
   },
