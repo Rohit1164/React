@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "icon": "FaLocationDot",
+    "name": "Find Us",
+    "location": "Buland Shahar"
+  },
+  {
+    "id": 2,
+    "icon": "IoCall",
+    "name": "Call Us",
+    "location": "Buland Shahar , Uttar Predesh"
+  },
+  {
+    "id": 3,
+    "icon": "IoMdMailUnread",
+    "name": "Mail Us",
+    "location": "Buland Shahar"
+  }
+]
