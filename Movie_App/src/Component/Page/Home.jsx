@@ -1,12 +1,13 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLoaderData } from "react-router-dom";
 import bg from "../../assets/background.jpg";
 
 import React from "react";
 
 const Home = () => {
+  const featuredData = useLoaderData();
+  console.log(featuredData);
   return (
     <div className="bg-gray-900 text-white min-h-screen">
-      {/* Hero Section */}
       <section
         className="relative w-full h-screen bg-cover bg-center"
         style={{
@@ -29,47 +30,36 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Featured Movies Section */}
-      <section className="py-16">
+      <section className="py-16 bg-gray-800">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-12">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-12 underline">
             Featured Movies
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 m-2 gap-8">
-            <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-              <img
-                className="w-full h-64 object-cover"
-                src="https://images.pexels.com/photos/9807584/pexels-photo-9807584.jpeg?auto=compress&cs=tinysrgb&w=600"
-                alt="Movie 1"
-              />
-              <div className="p-4">
-                <h3 className="text-xl font-semibold">Space Travel</h3>
-                <p className="text-sm text-gray-400">Release Date: 2025</p>
-              </div>
-            </div>
-            <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-              <img
-                className="w-full h-64 object-cover"
-                src="https://images.pexels.com/photos/12689070/pexels-photo-12689070.jpeg?auto=compress&cs=tinysrgb&w=600"
-                alt="Movie 2"
-              />
-              <div className="p-4">
-                <h3 className="text-xl font-semibold">facke Spider</h3>
-                <p className="text-sm text-gray-400">Release Date: 2025</p>
-              </div>
-            </div>
-            <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-              <img
-                className="w-full h-64 object-cover"
-                src="https://images.pexels.com/photos/15850433/pexels-photo-15850433/free-photo-of-a-man-in-a-mask-holding-a-sign-that-says-miss.jpeg?auto=compress&cs=tinysrgb&w=600"
-                alt="Movie 3"
-              />
-              <div className="p-4">
-                <h3 className="text-xl font-semibold">Joker 2.0</h3>
-                <p className="text-sm text-gray-400">Release Date: 2025</p>
-              </div>
-            </div>
-          </div>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 p-16">
+            {featuredData.Search.map((movieData) => {
+              return (
+                <>
+                  <li
+                    key={movieData.imdbID}
+                    className="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform"
+                  >
+                    <img
+                      src={movieData.Poster || movieData.Title}
+                      alt=""
+                      className="w-full h-96 object-cover"
+                    />
+                    <div className="p-4">
+                      <p className="text-3xl font-semibold">
+                        {movieData.Title}
+                      </p>
+                      <p className=" font-semibold">Type: {movieData.Type}</p>
+                      <p className="text-gray-400">Release: {movieData.Year}</p>
+                    </div>
+                  </li>
+                </>
+              );
+            })}
+          </ul>
         </div>
       </section>
     </div>

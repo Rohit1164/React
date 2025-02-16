@@ -9,8 +9,10 @@ import About from "./Component/Page/About.jsx";
 import TVShow from "./Component/Page/TVShow.jsx";
 import ErrorPage from "./Component/Page/ErrorPage.jsx";
 import { getMovieData } from "./Component/FetchData/GetApiData.jsx";
-import ContactForm from "./Component/Page/Contect.jsx";
+import { GetTVShowData } from "./Component/FetchData/GetTVShowData.jsx";
+import { Contact } from "./Component/Page/Contect.jsx";
 import GetMovieCard from "./Component/Page/GetMovieCard.jsx";
+import { GetFeaturedMovie } from "./Component/FetchData/GetFeaturedMovie.jsx";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +23,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+        loader: GetFeaturedMovie,
       },
       {
         path: "/about",
@@ -28,7 +31,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/contect",
-        element: <ContactForm />,
+        element: <Contact />,
       },
       {
         path: "/movie",
@@ -38,6 +41,7 @@ const router = createBrowserRouter([
       {
         path: "/tv",
         element: <TVShow />,
+        loader: GetTVShowData,
       },
       {
         path: "/movie/:id",

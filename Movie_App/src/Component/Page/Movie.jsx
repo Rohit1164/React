@@ -4,6 +4,9 @@ const Movie = () => {
   const movieInfo = useLoaderData();
   return (
     <div className="min-h-screen bg-gray-800 text-white p-20">
+      <h2 className="text-4xl font-bold text-center text-white underline mb-16">
+        Movies
+      </h2>
       <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {movieInfo.Search.map((movieData) => {
           return (
