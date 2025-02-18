@@ -6,15 +6,21 @@ function Profile({ userName, userAge }) {
   if (isName && isAge) {
     return (
       <div>
-        <h1>Profile details</h1>
-        <h2>Profile:{userName}</h2>
-        <h2>Age:{userAge}</h2>
+        <h2>Profile details</h2>
+        <p>
+          <span style={{ fontWeight: "600", font: "large" }}>Profile : </span>
+          {userName}
+        </p>
+        <p>
+          <span style={{ fontWeight: "600", font: "large" }}>Age : </span>
+          {userAge}
+        </p>
       </div>
     );
   } else {
     return (
       <div>
-        <h1>Please Login to see your profile</h1>
+        <h2 style={{ fontSize: "30px" }}>Please Login to see your profile</h2>
       </div>
     );
   }

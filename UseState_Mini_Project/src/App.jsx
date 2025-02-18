@@ -13,7 +13,9 @@ function App() {
       style={{
         display: "flex",
         justifyContent: "space-around",
-        marginLeft: "20%",
+        marginLeft: "6%",
+        border: "2px solid white",
+        borderRadius: "20px",
       }}
     >
       <div>
@@ -25,8 +27,9 @@ function App() {
           style={{
             height: "42px",
             border: "none",
-            width: "150px",
+            width: "79%",
             margin: "10px",
+            paddingLeft: "10px",
             fontSize: "large",
             borderRadius: "8px",
           }}
@@ -39,22 +42,33 @@ function App() {
           style={{
             height: "42px",
             border: "none",
-            width: "150px",
+            width: "79%",
+
             margin: "10px",
+            paddingLeft: "10px",
             fontSize: "large",
             borderRadius: "8px",
           }}
           placeholder="Enter your Age"
         />
-        <button onClick={() => setShowUserDetail(true)}>Show detail</button>
+        <button
+          onClick={() => setShowUserDetail(true)}
+          style={{
+            width: "79%",
+            color: "#fff",
+            paddingLeft: "15px",
+            backgroundColor: "blue",
+          }}
+        >
+          Show detail
+        </button>
         {showUserDetail && <Profile userName={userName} userAge={userAge} />}
       </div>
 
       <div
         style={{
           padding: "10px",
-          borderRadius: "50px",
-          backgroundColor: "#004080",
+          borderLeft: "2px solid white",
         }}
       >
         <h1>Derived Class</h1>
