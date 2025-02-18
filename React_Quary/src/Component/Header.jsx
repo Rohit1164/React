@@ -11,9 +11,12 @@ const Header = () => {
 
   return (
     <nav className="bg-gray-800 p-4">
-      <div className="container mx-auto flex px-20 justify-between items-center">
+      <div className="container mx-auto flex px-28 justify-between items-center">
         <div className="text-white text-2xl font-bold">
-          <img src={logo} alt="logo" className="h-16" />
+          <NavLink to={"/"} className=" flex">
+            <img src={logo} alt="logo" className="h-16" />
+            <span className="pt-3.5">MockProfileAPI</span>
+          </NavLink>
         </div>
 
         <div className="block lg:hidden">
@@ -47,21 +50,21 @@ const Header = () => {
           </button>
         </div>
 
-        <div className="hidden lg:flex space-x-4">
+        <div className="hidden lg:flex space-x-14">
           <NavLink to="/" className="text-white hover:text-gray-200">
             Home
-          </NavLink>
-          <NavLink to="/about" className="text-white hover:text-gray-200">
-            About
-          </NavLink>
-          <NavLink to="/contect" className="text-white hover:text-gray-200">
-            Contact
           </NavLink>
           <NavLink to="/service" className="text-white hover:text-gray-200">
             FetchRQ
           </NavLink>
           <NavLink to="/gitData" className="text-white hover:text-gray-200">
             GitHubUser
+          </NavLink>
+          <NavLink to="/contect" className="text-white hover:text-gray-200">
+            Contact
+          </NavLink>
+          <NavLink to="/about" className="text-white hover:text-gray-200">
+            About
           </NavLink>
         </div>
       </div>

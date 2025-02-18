@@ -1,6 +1,6 @@
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import { getInvPosts } from "../../Service";
 
 function FetchInvRQ() {
@@ -23,6 +23,11 @@ function FetchInvRQ() {
         Title- {data.title}
       </h2>
       <p className="text-white mb-4">Body- {data.body}</p>
+      <NavLink to={"/service"}>
+        <button className="bg-blue-600 rounded-md px-8 py-2 ml-[45%] mt-10">
+          Back
+        </button>
+      </NavLink>
     </div>
   );
 }

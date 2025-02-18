@@ -1,0 +1,13 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="90" fill="#4F46E5"/>
+  
+  <!-- User Icon -->
+  <circle cx="100" cy="75" r="30" fill="white"/>
+  <path d="M50 160c0-25 20-45 50-45s50 20 50 45" stroke="white" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Text -->
+  <text x="50%" y="185" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle" font-weight="bold">
+    MockProfileAPI
+  </text>
+</svg>

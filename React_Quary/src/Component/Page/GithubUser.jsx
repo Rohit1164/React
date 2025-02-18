@@ -20,29 +20,6 @@ function GithubUser() {
       lastPage.length === 10 ? allPages.length + 1 : undefined,
   });
 
-  console.log(data);
-
-  // Scroll use of React Query
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const isbotton =
-  //       window.innerHeight + window.scrollY >=
-  //       document.documentElement.scrollHeight - 10;
-  //     if (isbotton && hasNextPage) {
-  //       fetchNextPage();
-  //     }
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, [hasNextPage]);
-
-  // Scroll use of React Intersection Observer
-
   const { ref, inView } = useInView({
     threshold: 0,
   });
@@ -66,17 +43,17 @@ function GithubUser() {
           {data?.pages.map((page, pageIndex) => (
             <div
               key={pageIndex}
-              className="p-20 grid md:grid-cols-3 grid-cols-1 gap-4"
+              className="pl-52 pr-52 grid md:grid-cols-2 grid-cols-1 gap-4"
             >
               {page.map((user) => (
                 <li
                   key={user.id}
-                  className="mb-2 border-1 border-white rounded-3xl"
+                  className="mb-2 border-1 border-white rounded-3xl m-10"
                 >
                   <img
                     src={user.avatar_url}
                     alt="Users Name"
-                    className="h-80 w-full"
+                    className="h-80 w-full "
                   />
                   <h1 className="text-2xl font-bold p-4 text-center">
                     Name-{user.login}
@@ -88,11 +65,13 @@ function GithubUser() {
         </ul>
       </div>
       <div ref={ref}>
-        {isFetchingNextPage
-          ? "Loading more"
-          : hasNextPage
-          ? "Loading more than"
-          : "your are reached"}
+        {isFetchingNextPage ? (
+          <div className=".loading-circle"></div>
+        ) : hasNextPage ? (
+          <div className=".loading-circle"></div>
+        ) : (
+          <div className=".loading-circle"></div>
+        )}
       </div>
     </>
   );
