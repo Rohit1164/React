@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { applyMiddleware, createStore } from "redux";
 import { composeWithDevTools } from "@redux-devtools/extension";
 
@@ -17,7 +18,8 @@ const taskReducer = (state = intialState, action) => {
       return { ...state, task: [...state.task, action.payload] };
 
     case DELETE_TASK:
-      const deleteTask = state.task.filter((curtask, index) => {
+      // eslint-disable-next-line no-case-declarations
+      const deleteTask = state.task.filter((_curtask, index) => {
         return index !== action.payload;
       });
       return { ...state, task: deleteTask };
@@ -55,7 +57,9 @@ export const fetchtask = () => {
         type: FETCH_TASK,
         payload: task.map((curTask) => curTask.title),
       });
-    } catch (error) {}
+    } catch (error) {
+      /* empty */
+    }
   };
 };
 
