@@ -1,30 +1,30 @@
-import Home from './Component/Home/Home'
-import Navbar from './Component/Navbar/Navbar'
-import About from './Component/About/About'
-import MiniProject from './Component/Skills/MiniProject'
-import Skill from './Component/Skills/Skill'
-import Project from './Component/Work/Project'
-import ProjectTwo from './Component/Work/ProjectTwo'
-import Footer from './Component/Footer/Footer'
-import Thanks from './Component/Thanks/Thanks'
-
+import Navbar from "./Component/Navbar/Navbar";
+import Footer from "./Component/Footer/Footer";
+import { Outlet } from "react-router-dom";
+// name this app SkillSetStudio
 function App() {
-
   return (
-    <div className='h-[100%]'>
-      <main className='lg:w-[100%] md:w-[100%] sm:w-[100%] h-[100vh] bg-green-950'>
-      <Navbar/>
-      <Home/>
-      </main>
-      <About/>
-      <Project/>
-      <ProjectTwo/>
-      <Skill/>
-      <MiniProject/> 
-      <Thanks/>
-      <Footer/>
+    <div className="h-[100%]">
+      <Navbar />
+      <Outlet />
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
+
+// function App() {
+//   return (
+//     <div>
+//       <div className="bg-white text-black dark:bg-gray-900 dark:text-white min-h-screen p-4">
+//         <h1 className="text-2xl font-bold">Welcome to my portfolio</h1>
+//         <p>This supports dark mode!</p>
+//       </div>
+
+//       <ColorModeToggle />
+//       {/* Other portfolio components */}
+//     </div>
+//   );
+// }
+// export default App;
