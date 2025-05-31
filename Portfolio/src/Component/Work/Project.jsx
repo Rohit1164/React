@@ -4,12 +4,11 @@ import boy from "./map.png";
 function Project() {
   return (
     <>
-      <div className="md:flex md:justify-evenly grid items-center w-[100%] px-20  py-52 md:h-[100vh] h-[150%] bg-pink-400 sticky top-1">
-        <div className=" w-96 rounded-md h-80 mt-12">
-          <h1 className="text-7xl font-bold font-mono text-green-950">
-            World Atlas
-          </h1>
-          <p className=" text-xl">
+      <hr />
+      <div className="md:flex md:justify-evenly grid items-center w-[100%] px-20  py-52 md:h-[100vh] h-[150%] bg-gray-300 dark:bg-green-950 text-black dark:text-whitesticky top-1">
+        <div className=" w-96 rounded-md h-80 mt-12 bg-gray-300 dark:bg-green-950 text-black dark:text-white">
+          <h1 className="text-7xl font-bold font-mono ">World Atlas</h1>
+          <p className="text-xl">
             A &quot;World Atlas Project&quot; can refer to several initiatives,
             including the WorldAtlas.com, a large publishing resource for
             geography and related topics, as well as projects like the Global
@@ -22,7 +21,7 @@ function Project() {
           >
             VIEW
           </a> */}
-          <button className="h-12 w-44 text-2xl p-2 m-10 rounded-md bg-green-950 text-pink-400">
+          <button className="h-12 w-44 text-2xl p-2 m-10 rounded-md bg-gray-300 dark:bg-green-950 text-black dark:text-white">
             more details
           </button>
         </div>
@@ -33,9 +32,9 @@ function Project() {
         />
       </div>
       <hr />
-      <div className="md:flex md:justify-evenly grid items-center w-[100%] px-20  py-52 md:h-[110vh] h-[150%] bg-pink-400 sticky top-1">
+      <div className="md:flex md:justify-evenly grid items-center w-[100%] px-20  py-52 md:h-[110vh] h-[150%] bg-gray-300 dark:bg-green-950 text-black dark:text-white sticky top-1">
         <div className="w-96 rounded-md h-80 mt-12">
-          <h1 className="w-[100%] text-7xl font-bold font-mono text-green-950">
+          <h1 className="w-[100%] text-7xl font-bold font-mono bg-gray-300 dark:bg-green-950 text-black dark:text-white">
             Mock profile Api
           </h1>
           <p className="text-xl">
@@ -51,7 +50,7 @@ function Project() {
           >
             VIEW
           </a> */}
-          <button className="h-12 w-44 text-2xl p-2 m-10 rounded-md bg-green-950 text-pink-400">
+          <button className="h-12 w-44 text-2xl p-2 m-10 rounded-md bg-gray-300 dark:bg-green-950 text-black dark:text-white">
             more details
           </button>
         </div>

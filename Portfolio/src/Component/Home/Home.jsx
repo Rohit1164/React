@@ -3,10 +3,13 @@ function Home() {
   return (
     <>
       <hr />
-      <div id="home" className="grid text-center h-[100vh] bg-pink-400">
+      <div
+        id="home"
+        className="grid text-center h-[100vh] bg-gray-300 dark:bg-green-950 text-black dark:text-white"
+      >
         <h1
           id="intro"
-          className="lg:text-[150px] md:text-8xl text-6xl font-bold text-green-950 mt-32  "
+          className="lg:text-[150px] md:text-8xl text-6xl font-bold mt-32  "
         >
           HII I&apos;M ROHIT
         </h1>
@@ -20,7 +23,7 @@ function Home() {
 
         <h1
           id="profetion"
-          className="lg:text-[150px] md:text-8xl text-6xl font-bold text-green-950 md:-mt-40 -mt-[50px] animate-pulse"
+          className="lg:text-[150px] md:text-8xl text-6xl font-bold  md:-mt-40 -mt-[50px] animate-pulse"
         >
           WEB DEVELOPER
         </h1>
