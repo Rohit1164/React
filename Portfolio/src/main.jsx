@@ -3,13 +3,13 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./Component/Home/Home.jsx";
-import About from "./Component/About/About.jsx";
-import Contect from "./Component/Contect.jsx";
+import Home from "./Component/pages/Home.jsx";
+import About from "./Component/pages/About.jsx";
+import Contect from "./Component/pages/Contect.jsx";
 import Project from "./Component/Work/Project.jsx";
-import MiniProject from "./Component/Skills/MiniProject.jsx";
-import Skill from "./Component/Skills/Skill.jsx";
-import MoreAbout from "./Component/About/MoreAbout.jsx";
+import MiniProject from "./Component/Work/MiniProject.jsx";
+// import Skill from "./Component/Skills/Skill.jsx";
+// import MoreAbout from "./Component/About/MoreAbout.jsx";
 
 const router = createBrowserRouter([
   {
@@ -25,25 +25,25 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: "/contect",
+        path: "/contact",
         element: <Contect />,
       },
       {
-        path: "/project",
+        path: "/mega-porjects",
         element: <Project />,
       },
       {
         path: "/mini-projects",
         element: <MiniProject />,
       },
-      {
-        path: "/skills",
-        element: <Skill />,
-      },
-      {
-        path: "/about-more",
-        element: <MoreAbout />,
-      },
+      // {
+      //   path: "/skills",
+      //   element: <Skill />,
+      // },
+      // {
+      //   path: "/about-more",
+      //   element: <MoreAbout />,
+      // },
     ],
   },
 ]);
