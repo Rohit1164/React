@@ -1,4 +1,4 @@
-import developerImg from "../assets/my.png";
+import developerImg from "../assets/imortent.jpg";
 import resumeFile from "../assets/resume.pdf";
 import Button from "../Button";
 
@@ -17,10 +17,14 @@ const languages = ["C", "C++", "Java", "Python", "TypeScript"];
 
 function About() {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-10 text-black dark:text-white">
+    <div className="px-20 py-10 bg-gray-100 text-black dark:bg-gray-900 dark:text-white">
       {/* Header */}
-      <h2 className="text-4xl font-bold text-center mb-8">About Me</h2>
-
+      <div className="text-center mb-8">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white tracking-tight">
+          About Me
+        </h2>
+        <div className="mt-2 mx-auto h-1 w-24 bg-gray-900 dark:bg-white rounded-full"></div>
+      </div>
       {/* Main Grid */}
       <div className="grid md:grid-cols-2 gap-10 items-center">
         {/* Developer Image */}
@@ -49,7 +53,7 @@ function About() {
                 </div>
                 <div className="w-full h-3 bg-gray-300 dark:bg-gray-700 rounded-full">
                   <div
-                    className="h-3 bg-gray-800 rounded-full"
+                    className="h-3 bg-gray-900 dark:bg-white rounded-full"
                     style={{ width: `${skill.percent}%` }}
                   ></div>
                 </div>

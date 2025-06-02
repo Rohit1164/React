@@ -1,104 +1,68 @@
 import BMI from "../assets/BMI.png";
 import Tode from "../assets/todo.png";
+import Button from "../Button";
 import Timer from "../assets/timer.png";
 import Color from "../assets/color.png";
 import Theame from "../assets/theame.png";
 import Calculator from "../assets/calculator.png";
 function MiniProject() {
+  const cards = [
+    {
+      name: "BMI",
+      image: BMI,
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Anim",
+    },
+    {
+      name: "todo",
+      image: Tode,
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Anim",
+    },
+    {
+      name: "timer",
+      image: Timer,
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Anim",
+    },
+    {
+      name: "color",
+      image: Color,
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Anim",
+    },
+    {
+      name: "Calculator",
+      image: Calculator,
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Anim",
+    },
+    {
+      name: "theme switer",
+      image: Theame,
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Anim",
+    },
+  ];
   return (
     <>
-      <hr />
-      <div className="box-content lg:h-[200%]  md:h-[280%] h-[480%] w-[100%] pl-1 z sticky top-1 bg-gray-300 dark:bg-green-950 text-black dark:text-white">
-        <div className="grid h-[80%]  lg:grid-cols-3 justify-center items-center md:grid-cols-2 grid-cols-1 pl-12 p-20 px-0">
-          <div className="grid h-80 w-80 md:ml-8 m-16">
-            <img className="h-60 w-60" src={Tode} alt="tode" />
-            <h2 className="text-4xl font-bold text-green-950 font-mono">
-              Todo
-            </h2>
-            <p className="text-xl bg-gray-300 dark:bg-green-950 text-black dark:text-white">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-              rerum, inventore eius maxime quia corporis obcaecati optio velit
-              illum dolorem?
-            </p>
-            <button className="text-xl font-bold h-10 w-32 m-3 ml-20 bg-gray-300 dark:bg-green-950 text-black dark:text-white rounded-md">
-              VIEW
-            </button>
-          </div>
-          <div className="grid h-80 w-80 md:ml-8 m-16 mt-32">
-            <img className="h-60 w-60" src={BMI} alt="BMI" />
-            <h2 className="text-4xl font-bold text-green-950 font-mono">BMI</h2>
-            <p className="text-xl bg-gray-300 dark:bg-green-950 text-black dark:text-white">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-              rerum, inventore eius maxime quia corporis obcaecati optio velit
-              illum dolorem?
-            </p>
-            <button className="text-xl font-bold h-10 w-32 m-3 ml-20 bg-gray-300 dark:bg-green-950 text-black dark:text-white rounded-md">
-              VIEW
-            </button>
-          </div>
-          <div className="grid h-80 w-80 md:ml-8 m-16 mt-32">
-            <img className="h-60 w-60" src={Calculator} alt="Calculator" />
-            <h2 className="text-4xl font-bold text-green-950 font-mono">
-              Calculator
-            </h2>
-            <p className="text-xl">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-              rerum, inventore eius maxime quia corporis obcaecati optio velit
-              illum dolorem?
-            </p>
-            <button className="text-xl font-bold h-10 w-32 m-3 ml-20 bg-gray-300 dark:bg-green-950 text-black dark:text-white rounded-md">
-              VIEW
-            </button>
-          </div>
-          <div className="grid h-80 w-80 md:ml-8 m-16 mt-32">
-            <img className="h-60 w-60" src={Theame} alt="theame" />
-            <h2 className="text-4xl font-bold text-green-950 font-mono">
-              Theame switcher
-            </h2>
-            <p className="text-xl">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-              rerum, inventore eius maxime quia corporis obcaecati optio velit
-              illum dolorem?
-            </p>
-            <button className="text-xl font-bold h-10 w-32 m-3 ml-20 bg-gray-300 dark:bg-green-950 text-black dark:text-white rounded-md">
-              VIEW
-            </button>
-          </div>
-          <div className="grid h-80 w-80 md:ml-8 m-16 mt-32">
-            <img className="h-60 w-60" src={Timer} alt="timer" />
-            <h2 className="text-4xl font-bold text-green-950 font-mono">
-              Timer
-            </h2>
-            <p className="text-xl">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-              rerum, inventore eius maxime quia corporis obcaecati optio velit
-              illum dolorem?
-            </p>
-            <button className="text-xl font-bold h-10 w-32 m-3 ml-20 bg-gray-300 dark:bg-green-950 text-black dark:text-white rounded-md">
-              VIEW
-            </button>
-          </div>
-          <div className="grid h-80 w-80 md:ml-8 m-16 mt-32">
-            <img className="h-60 w-60" src={Color} alt="color" />
-            <h2 className="text-4xl font-bold text-green-950 font-mono">
-              Auto Color Changer
-            </h2>
-            <p className="text-xl">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-              rerum, inventore eius maxime quia corporis obcaecati optio velit
-              illum dolorem?
-            </p>
-            <button className="text-xl font-bold h-10 w-32 m-3 ml-20 bg-gray-300 dark:bg-green-950 text-black dark:text-white rounded-md">
-              VIEW
-            </button>
-          </div>
+      <div className="w-full min-h-screen bg-gray-100 dark:bg-gray-900 text-black dark:text-white py-12 px-4">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3 place-items-center">
+          {cards.map((card) => (
+            <div
+              key={card.name}
+              className="bg-white dark:bg-gray-800 rounded-2xl p-6 w-auto text-center transition transform hover:scale-105 duration-400 dark:shadow-blue-500 shadow-2xl"
+            >
+              <img
+                src={card.image}
+                alt={card.name}
+                className="h-40 w-40 object-contain mx-auto mb-4"
+              />
+              <h2 className="text-2xl font-bold font-mono mb-2 text-gray-800 dark:text-white">
+                {card.name}
+              </h2>
+              <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+                {card.text}
+              </p>
+              <Button>View</Button>
+            </div>
+          ))}
+          <Button>VIEW All</Button>
         </div>
-        <button
-          className="md:text-2xl text-xl font-bold h-16 w-52 lg:ml-[45%] lg:mt-32   md:ml-72 md:mt-52
-      mt-[540px] ml-36 bg-gray-300 dark:bg-green-950 text-black dark:text-whit rounded-md"
-        >
-          VIEW All
-        </button>
       </div>
     </>
   );

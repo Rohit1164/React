@@ -1,6 +1,7 @@
 import { FaGithub, FaLinkedin, FaTwitter, FaFacebook } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import { LuSunMoon, LuSunMedium } from "react-icons/lu";
 
 function PortfolioNavbar() {
   const [theme, setTheme] = useState("light");
@@ -38,12 +39,12 @@ function PortfolioNavbar() {
   }, [theme]);
 
   return (
-    <header className="bg-white text-black dark:bg-gray-900 dark:text-white shadow-md w-full">
+    <header className="bg-white text-black dark:bg-gray-900 dark:text-white w-full shadow-md dark:shadow-lg dark:drop-shadow-[0_4px_6px_rgba(255,255,255,0.2)]">
       <nav className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         <ul className="flex space-x-6 items-center">
           <li>
             <select
-              className="bg-gray-300 dark:bg-green-950 text-black dark:text-white border-none"
+              className="bg-white dark:bg-gray-900 text-black dark:text-white border border-gray-300 dark:border-gray-700 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
               onChange={handleChange}
               defaultValue=""
             >
@@ -54,6 +55,7 @@ function PortfolioNavbar() {
               <option value="MINI PROJECT">MINI PROJECT</option>
             </select>
           </li>
+
           <li>
             <NavLink to="/about" className="hover:text-blue-500 transition">
               About
@@ -113,7 +115,7 @@ function PortfolioNavbar() {
             className="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition"
             aria-label="Toggle Dark Mode"
           >
-            {theme === "dark" ? "☀" : "🌙"}
+            {theme === "dark" ? <LuSunMedium /> : <LuSunMoon />}
           </button>
         </div>
       </nav>

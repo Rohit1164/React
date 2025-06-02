@@ -8,6 +8,7 @@ import About from "./Component/pages/About.jsx";
 import Contect from "./Component/pages/Contect.jsx";
 import Project from "./Component/Work/Project.jsx";
 import MiniProject from "./Component/Work/MiniProject.jsx";
+import ProjectDetails from "./Component/Work/pages/ProjectDetails.jsx";
 // import Skill from "./Component/Skills/Skill.jsx";
 // import MoreAbout from "./Component/About/MoreAbout.jsx";
 
@@ -36,10 +37,10 @@ const router = createBrowserRouter([
         path: "/mini-projects",
         element: <MiniProject />,
       },
-      // {
-      //   path: "/skills",
-      //   element: <Skill />,
-      // },
+      {
+        path: "/details",
+        element: <ProjectDetails />,
+      },
       // {
       //   path: "/about-more",
       //   element: <MoreAbout />,

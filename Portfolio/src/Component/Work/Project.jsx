@@ -1,12 +1,13 @@
-import ProjectDemo from "./wap.png";
-import boy from "./map.png";
+import ProjectDemo from "../assets/wap.png";
+import boy from "../assets/map.png";
+import Button from "../Button";
+import { NavLink } from "react-router-dom";
 
 function Project() {
   return (
     <>
-      <hr />
-      <div className="md:flex md:justify-evenly grid items-center w-[100%] px-20  py-52 md:h-[100vh] h-[150%] bg-gray-300 dark:bg-green-950 text-black dark:text-whitesticky top-1">
-        <div className=" w-96 rounded-md h-80 mt-12 bg-gray-300 dark:bg-green-950 text-black dark:text-white">
+      <div className="md:flex md:justify-evenly grid items-center w-[100%] px-20  py-52 md:h-[100vh] h-[150%] bg-gray-100 dark:bg-gray-900 text-black dark:text-whitesticky top-1">
+        <div className=" w-96 rounded-md h-80 mt-12 bg-gray-100 dark:bg-gray-900 text-black dark:text-white">
           <h1 className="text-7xl font-bold font-mono ">World Atlas</h1>
           <p className="text-xl">
             A &quot;World Atlas Project&quot; can refer to several initiatives,
@@ -15,15 +16,9 @@ function Project() {
             Ecosystems Atlas and Project Atlas focused on mapping and
             understanding specific areas like ecosystems or financial flows
           </p>
-          {/* <a
-            href="https://worldatlas21625.netlify.app/"
-            className="h-12 w-44 text-2xl p-2 m-10 rounded-md bg-green-950 text-green-400"
-          >
-            VIEW
-          </a> */}
-          <button className="h-12 w-44 text-2xl p-2 m-10 rounded-md bg-gray-300 dark:bg-green-950 text-black dark:text-white">
-            more details
-          </button>
+          <Button>
+            <NavLink to={"/details"}>more details</NavLink>
+          </Button>
         </div>
         <img
           className="rounded-md md:h-96 h-72 my-20 shadow-blue-500 shadow-2xl"
@@ -31,10 +26,11 @@ function Project() {
           alt="boy"
         />
       </div>
-      <hr />
-      <div className="md:flex md:justify-evenly grid items-center w-[100%] px-20  py-52 md:h-[110vh] h-[150%] bg-gray-300 dark:bg-green-950 text-black dark:text-white sticky top-1">
+      <hr className=" h-1 border-0 bg-gradient-to-r from-gray-300 via-gray-500 to-gray-300 dark:from-gray-700 dark:via-white dark:to-gray-700" />
+
+      <div className="md:flex md:justify-evenly grid items-center w-[100%] px-20  py-52 md:h-[110vh] h-[150%] bg-gray-100 dark:bg-gray-900 text-black dark:text-white sticky top-1">
         <div className="w-96 rounded-md h-80 mt-12">
-          <h1 className="w-[100%] text-7xl font-bold font-mono bg-gray-300 dark:bg-green-950 text-black dark:text-white">
+          <h1 className="w-[100%] text-7xl font-bold font-mono bg-gray-100 dark:bg-gray-900 text-black dark:text-white">
             Mock profile Api
           </h1>
           <p className="text-xl">
@@ -44,15 +40,7 @@ function Project() {
             hand, are production-grade interfaces providing access to actual
             data for end users.
           </p>
-          {/* <a
-            href="https://mockprofileapi.netlify.app/"
-            className="h-12 w-44 text-2xl p-2 m-10 rounded-md bg-green-950 text-amber-400"
-          >
-            VIEW
-          </a> */}
-          <button className="h-12 w-44 text-2xl p-2 m-10 rounded-md bg-gray-300 dark:bg-green-950 text-black dark:text-white">
-            more details
-          </button>
+          <Button>more details</Button>
         </div>
         <img
           className="rounded-md md:h-96 h-72 my-20 shadow-blue-500 shadow-2xl"
