@@ -11,7 +11,7 @@ function PortfolioNavbar() {
   const handleChange = (e) => {
     const value = e.target.value;
     if (value === "MEGA PROJECT") {
-      navigate("/mega-porjects");
+      navigate("/mega-projects");
     } else if (value === "MINI PROJECT") {
       navigate("/mini-projects");
     }

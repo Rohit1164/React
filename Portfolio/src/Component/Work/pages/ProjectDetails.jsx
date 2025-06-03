@@ -1,23 +1,72 @@
 import Button from "../../Button";
-import projectImage from "../../assets/wap.png";
+import firstprojectImage from "../../assets/wap.png";
+import secondprojectImage from "../../assets/map.png";
+import thirdprojectImage from "../../assets/moviedekho.png";
+import { NavLink, useParams } from "react-router-dom";
 
-const ProjectDetails = () => {
-  const project = {
-    title: "Task Manager App",
+const projects = [
+  {
+    id: 1,
+    title: "World Atlas",
     description:
       "A productivity web application to manage daily tasks, set reminders, and track project progress. Designed for teams and individuals who value efficiency and organization.",
-    image: projectImage,
+    image: firstprojectImage,
     technologies: [
-      "React.js",
+      "HTML&CSS",
+      "JavaScript",
       "Tailwind CSS",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
+      "React.js",
+      "React-Redux",
+      "React-Quary",
     ],
-    demoLink: "https://demo-taskmanager.com",
-    githubLink: "https://github.com/username/task-manager-app",
+    demoLink: "https://worldatlas21625.netlify.app/",
+    githubLink: "https://github.com/Rohit1164/React/tree/master/WorldAtlas",
     usedBy: ["Developers", "Project Managers", "Students", "Startups"],
-  };
+  },
+  {
+    id: 2,
+    title: "Mock profile API",
+    description:
+      "A productivity web application to manage daily tasks, set reminders, and track project progress. Designed for teams and individuals who value efficiency and organization.",
+    image: secondprojectImage,
+    technologies: [
+      "HTML&CSS",
+      "JavaScript",
+      "Tailwind CSS",
+      "React.js",
+      "React-Redux",
+      "React-Quary",
+    ],
+    demoLink: "https://mockprofileapi.netlify.app/",
+    githubLink: "https://github.com/Rohit1164/React/tree/master/React_Quary",
+    usedBy: ["Developers", "Project Managers", "Students", "Startups"],
+  },
+  {
+    id: 3,
+    title: "MovieDekho",
+    description:
+      "A productivity web application to manage daily tasks, set reminders, and track project progress. Designed for teams and individuals who value efficiency and organization.",
+    image: thirdprojectImage,
+    technologies: [
+      "HTML&CSS",
+      "JavaScript",
+      "Tailwind CSS",
+      "React.js",
+      "React-Redux",
+      "React-Quary",
+    ],
+    demoLink: "https://moviedekho21625.netlify.app/",
+    githubLink: "https://github.com/Rohit1164/React/tree/master/Movie_App",
+    usedBy: ["Developers", "Project Managers", "Students", "Startups"],
+  },
+];
+
+const ProjectDetails = () => {
+  const { id } = useParams();
+  const project = projects.find((card) => card.id === parseInt(id));
+
+  if (!project)
+    return <div className="p-4 text-red-500">Project Not Found</div>;
 
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white py-10 px-6 md:px-20">
@@ -70,6 +119,9 @@ const ProjectDetails = () => {
           </a>
         </div>
       </div>
+      <Button>
+        <NavLink to={"/mega-projects"}>Go Back</NavLink>
+      </Button>
     </div>
   );
 };

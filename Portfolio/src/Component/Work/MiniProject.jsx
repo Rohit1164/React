@@ -5,46 +5,48 @@ import Timer from "../assets/timer.png";
 import Color from "../assets/color.png";
 import Theame from "../assets/theame.png";
 import Calculator from "../assets/calculator.png";
+import { NavLink } from "react-router-dom";
+
 function MiniProject() {
   const cards = [
     {
+      id: 1,
       name: "BMI",
       image: BMI,
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Anim",
     },
     {
+      id: 2,
       name: "todo",
       image: Tode,
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Anim",
     },
     {
+      id: 3,
       name: "timer",
       image: Timer,
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Anim",
     },
     {
+      id: 4,
       name: "color",
       image: Color,
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Anim",
     },
     {
+      id: 5,
       name: "Calculator",
       image: Calculator,
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Anim",
     },
     {
+      id: 6,
       name: "theme switer",
       image: Theame,
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Anim",
     },
   ];
   return (
     <>
       <div className="w-full min-h-screen bg-gray-100 dark:bg-gray-900 text-black dark:text-white py-12 px-4">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3 place-items-center">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4 place-items-center">
           {cards.map((card) => (
             <div
-              key={card.name}
+              key={card.id}
               className="bg-white dark:bg-gray-800 rounded-2xl p-6 w-auto text-center transition transform hover:scale-105 duration-400 dark:shadow-blue-500 shadow-2xl"
             >
               <img
@@ -55,10 +57,9 @@ function MiniProject() {
               <h2 className="text-2xl font-bold font-mono mb-2 text-gray-800 dark:text-white">
                 {card.name}
               </h2>
-              <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
-                {card.text}
-              </p>
-              <Button>View</Button>
+              <Button>
+                <NavLink to={`/mini-project-details/${card.id}`}>View</NavLink>
+              </Button>
             </div>
           ))}
           <Button>VIEW All</Button>

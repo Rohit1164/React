@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "BMI",
+    "image": "./Component/assets/BMI.png",
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Anim"
+  },
+  {
+    "id": 2,
+    "name": "todo",
+    "image": "./Component/assets/Tode",
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Anim"
+  },
+  {
+    "id": 3,
+    "name": "timer",
+    "image": "./Component/assets/Timer.png",
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Anim"
+  },
+  {
+    "id": 4,
+    "name": "color",
+    "image": "./Component/assets/Color.png",
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Anim"
+  },
+  {
+    "id": 5,
+    "name": "Calculator",
+    "image": "./Component/assets/Calculator.png",
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Anim"
+  },
+  {
+    "id": 6,
+    "name": "theme switer",
+    "image": "./Component/assets/Theame.png",
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Anim"
+  }
+]
